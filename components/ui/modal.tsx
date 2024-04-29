@@ -31,7 +31,7 @@ export const Modal = ({title, description, children}: ModalProps) => {
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
         <DialogDescription>{description}</DialogDescription>
-        <DialogFooter><Button variant='ghost' size='lg'><Link href='/'>Learn more</Link></Button></DialogFooter>
+        <DialogFooter><Button variant='link' size='lg'><Link href='/'>Learn more</Link></Button></DialogFooter>
       </DialogContent>
     </Dialog>
   );
