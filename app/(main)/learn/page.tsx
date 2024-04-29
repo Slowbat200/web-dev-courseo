@@ -3,18 +3,11 @@
 import { useUser } from '@clerk/nextjs';
 import { motion } from 'framer-motion';
 import { Highlight } from '@/components/ui/hero-highlight';
-import useModal from '@/hooks/useModal';
 import { Modal } from '@/components/ui/modal';
 const LearnPage = () => {
   const { user, isLoaded, isSignedIn } = useUser();
   if (!isLoaded || !isSignedIn) return null;
 
-  const handleModal = useModal();
-  const onChange = (open: boolean) => {
-    if (!open) {
-      handleModal.onClose();
-    }
-  };
   return (
     <main>
       <section id='header'>
@@ -32,7 +25,7 @@ const LearnPage = () => {
         </motion.h1>
         <aside className='px-5 py-10 text-sm md:text-md lg:text-lg xl:text-xl'>
           <p>
-            Let me introduce you. I'm <Highlight>Slowbat</Highlight> and I will
+            Let me introduce you. I&apos;m <Highlight>Slowbat</Highlight> and I will
             be your guide on this journey.
           </p>
           <p>
@@ -43,7 +36,7 @@ const LearnPage = () => {
 
         <Modal 
         title='Basic information' 
-        description='So first things first' 
+        description='So first things first'
         />
       </section>
     </main>
