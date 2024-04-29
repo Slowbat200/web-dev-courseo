@@ -21,7 +21,7 @@ export const Sidebar = ({ className }: Props) => {
   return (
     <div
     className={cn(
-      'bg-blue-500 h-full w-fit lg:w-[256px] lg:fixed flex flex-col gap-y-5 left-0 top-0 px-4 border-r-2 pt-10',
+      'dark:bg-black bg-white-80 h-full w-fit lg:w-[256px] lg:fixed flex flex-col gap-y-5 left-0 top-0 px-4 border-r-2 pt-10',
           className
         )}
         >

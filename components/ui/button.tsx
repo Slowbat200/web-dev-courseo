@@ -18,6 +18,11 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
+        modal:'text-violet-300 outline outline-violet-500',
+        sidebar_button:
+          'bg-primary text-slate-200 dark:text-slate-700 border-2 border-transparent dark:hover:bg-slate-100 hover:bg-sky-500/80 transition-none',
+        sidebar_outline:
+          'dark:bg-white dark:text-slate-700 active:text-black outline-sky-500 outline-4 outline hover:bg-sky-500/20 transition-none',
         landing:
           'shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear',
       },

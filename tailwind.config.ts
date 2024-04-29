@@ -23,6 +23,47 @@ const config = {
       screens: {
         '2xl': '1400px',
       },
+      mytheme: {
+        primary: '#ff0097',
+
+        'primary-content': '#160008',
+
+        secondary: '#00c4af',
+
+        'secondary-content': '#000e0b',
+
+        accent: '#00a055',
+
+        'accent-content': '#000902',
+
+        neutral: '#131714',
+
+        'neutral-content': '#c9cbca',
+
+        'base-100': '#1c2035',
+
+        'base-200': '#171a2d',
+
+        'base-300': '#121525',
+
+        'base-content': '#cccdd3',
+
+        info: '#00b7ff',
+
+        'info-content': '#000c16',
+
+        success: '#3f9d00',
+
+        'success-content': '#010900',
+
+        warning: '#d59500',
+
+        'warning-content': '#100800',
+
+        error: '#da001d',
+
+        'error-content': '#ffd7d2',
+      },
     },
     extend: {
       colors: {
@@ -83,6 +124,7 @@ const config = {
   },
   plugins: [
     require('tailwindcss-animate'),
+    require('daisyui'),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
