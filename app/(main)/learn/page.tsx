@@ -4,6 +4,14 @@ import { useUser } from '@clerk/nextjs';
 import { motion } from 'framer-motion';
 import { Highlight } from '@/components/ui/hero-highlight';
 import { Modal } from '@/components/ui/modal';
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+
 const LearnPage = () => {
   const { user, isLoaded, isSignedIn } = useUser();
   if (!isLoaded || !isSignedIn) return null;
@@ -50,26 +58,39 @@ const LearnPage = () => {
             and some information that others probably won&apos;t tell you.{' '}
           </p>
         </div>
-        <div className='px-5 pt-10 bg-blue-500 flex flex-col gap-y-5'>
-          <h2 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl'>
-            In HTML you can find:
-          </h2>
-          <div className='bg-red-500'>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. At est
-              ipsa ullam vel voluptatum alias neque veniam incidunt eum amet
-              suscipit deserunt quas consequatur tempora, totam ratione nisi?
-              Tempore, nam?
-            </p>
-          </div>
-          <div className='bg-green-500'>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. At est
-              ipsa ullam vel voluptatum alias neque veniam incidunt eum amet
-              suscipit deserunt quas consequatur tempora, totam ratione nisi?
-              Tempore, nam?
-            </p>
-          </div>
+        <div className='px-5 pt-10 flex flex-col gap-y-5'>
+          <Accordion type='single' collapsible>
+            <AccordionItem value='item-1'>
+              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type='single' collapsible>
+            <AccordionItem value='item-1'>
+              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type='single' collapsible>
+            <AccordionItem value='item-1'>
+              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type='single' collapsible>
+            <AccordionItem value='item-1'>
+              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
     </main>

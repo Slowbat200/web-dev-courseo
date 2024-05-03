@@ -12,7 +12,6 @@ import {
 import { motion } from 'framer-motion';
 import { Loader } from 'lucide-react';
 import Link from 'next/link';
-import { Separator } from '@/components/ui/separator';
 import CssIcon from '@mui/icons-material/Css';
 import SchoolIcon from '@mui/icons-material/School';
 import HtmlIcon from '@mui/icons-material/Html';

@@ -7,13 +7,15 @@ type Props = {
 
 const MainLayout = ({ children }: Props) => {
   return (
-    <>
-    <MobileHeader />
-      <Sidebar className='hidden lg:flex' />
-      <main className='lg:pl-[256px] h-full pt-[60px] lg:pt-0'>
-        <div className=' h-full'>{children}</div>
-      </main>
-    </>
+    <div className='h-full relative'>
+      <div>
+        <Sidebar className='hidden lg:flex'/>
+      <MobileHeader />
+      </div>
+    <main className='md:pl-72 lg:pt-0 pt-20 bg-black'>
+      {children}
+    </main>
+  </div>
   );
 };
 

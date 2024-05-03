@@ -18,7 +18,7 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
-        modal:'text-violet-300 outline outline-violet-500',
+        modal:'dark:text-violet-300 text-black outline outline-violet-500',
         sidebar_button:
           'bg-primary text-slate-200 dark:text-slate-700 border-2 border-transparent dark:hover:bg-slate-100 hover:bg-sky-500/80 transition-none',
         sidebar_outline:
