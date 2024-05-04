@@ -61,17 +61,21 @@ const LearnPage = () => {
         <div className='px-5 pt-10 flex flex-col gap-y-5'>
           <Accordion type='single' collapsible>
             <AccordionItem value='item-1'>
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionTrigger>What can I learn here?</AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                In my courses you will find information about the language,
+                information about the history of web languages, lots of code
+                samples and explanations of how the code works. There will also
+                be a sandbox where you can try out what you have learned during
+                the course.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
           <Accordion type='single' collapsible>
             <AccordionItem value='item-1'>
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionTrigger>Can I get certificate here?</AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                Yes. In the final update, certificates will be added for all courses.  
               </AccordionContent>
             </AccordionItem>
           </Accordion>

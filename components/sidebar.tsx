@@ -42,7 +42,7 @@ export const Sidebar = ({ className }: Props) => {
         <SidebarItem label='Html' href='/html' iconSrc={htmlIcon}/>
         <SidebarItem label='Css' href='/css' iconSrc={cssIcon}/>
         <SidebarItem label='JavaScript' href='/js' iconSrc={jsIcon} />
-      <div className='flex flex-row relative bottom-0 right-0 flex-1 gap-x-3'>
+      <div className='lg:flex lg:flex-row hidden relative bottom-0 right-0 flex-1 gap-x-3'>
         <ThemeToggle />
         <UserButton afterSignOutUrl='/' />
       </div>
