@@ -12,10 +12,6 @@ import {
 import { motion } from 'framer-motion';
 import { Loader } from 'lucide-react';
 import Link from 'next/link';
-import CssIcon from '@mui/icons-material/Css';
-import SchoolIcon from '@mui/icons-material/School';
-import HtmlIcon from '@mui/icons-material/Html';
-import JavascriptIcon from '@mui/icons-material/Javascript';
 
 export default function Home() {
   return (
@@ -36,10 +32,10 @@ export default function Home() {
           Web Development Course
         </motion.h1>
       </div>
-      <div className=' max-w-[1500px] mx-auto w-full flex flex-col lg:flex-row flex-1 items-center gap-y-10 gap-x-10'>
+      <div className=' max-w-[1500px] mx-auto w-full flex flex-col lg:flex-row flex-1 items-center justify-center gap-y-10 gap-x-10'>
         <div className='lg:w-[900px] w-full flex flex-col gap-y-10'>
           <div className='flex flex-col gap-y-2 mx-[3em]'>
-            <h1 className='text-[22px] md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>
+            <h1 className='text-[22px] md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center'>
               {' '}
               Here you will find:
             </h1>
@@ -97,44 +93,6 @@ export default function Home() {
                 </SignedIn>
               </ClerkLoaded>
             </div>
-          </div>
-        </div>
-        <div className='flex flex-col gap-y-5 mt-5 pr-0 sm:pr-[3em]'>
-          {/** Creating box with introducing into Theory */}
-          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
-            <SchoolIcon sx={{ fontSize: 40 }} className='text-[#0f0]' />
-            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
-              What is Front-end and Backend, protocols for communication with
-              web, development environment for developers and much more.
-            </p>
-          </div>
-
-          {/** Creating box with introducing into HTML */}
-
-          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
-            <HtmlIcon sx={{ fontSize: 50 }} className='text-orange-600' />
-            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
-              What is HTML, types of tags, HTML history and so much examples and
-              code samples.
-            </p>
-          </div>
-
-          {/** Creating box with introducing into CSS */}
-          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
-            <CssIcon sx={{ fontSize: 50 }} className='text-blue-500' />
-            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
-              Why use Css, history of Css, information about preprocessor, Css
-              usage in practice and many examples and code samples.
-            </p>
-          </div>
-
-          {/** Creating box with introducing into JS */}
-          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
-            <JavascriptIcon sx={{ fontSize: 50 }} className='text-yellow-500' />
-            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
-              How JavaScript works, what frameworks have been built and many
-              more examples and code samples.
-            </p>
           </div>
         </div>
       </div>

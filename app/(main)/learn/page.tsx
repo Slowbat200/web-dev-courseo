@@ -5,12 +5,10 @@ import { motion } from 'framer-motion';
 import { Highlight } from '@/components/ui/hero-highlight';
 import { Modal } from '@/components/ui/modal';
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+import CssIcon from '@mui/icons-material/Css';
+import SchoolIcon from '@mui/icons-material/School';
+import HtmlIcon from '@mui/icons-material/Html';
+import JavascriptIcon from '@mui/icons-material/Javascript';
 
 const LearnPage = () => {
   const { user, isLoaded, isSignedIn } = useUser();
@@ -44,7 +42,10 @@ const LearnPage = () => {
 
         <Modal
           title='Basic information'
-          description='So first things first, there are four free courses. They are Web development, Html, Css and JavaScript. Then there are courses that are paid. They are TailwindCSS, React and Next.js.'
+          description='So first things first, there are four free courses. 
+          They are Web development, Html, Css and JavaScript. 
+          Then there are courses that are paid. They are TailwindCSS, React and Next.js. 
+          In each course you can find informations for begginers, intermediates and proffesionals.'
         />
       </section>
       <section id='more-info'>
@@ -58,48 +59,43 @@ const LearnPage = () => {
             and some information that others probably won&apos;t tell you.{' '}
           </p>
         </div>
-        <div className='px-5 pt-10 flex flex-col gap-y-5'>
-          <Accordion type='single' collapsible>
-            <AccordionItem value='item-1'>
-              <AccordionTrigger>What can I learn here?</AccordionTrigger>
-              <AccordionContent>
-                In my courses you will find information about the language,
-                information about the history of web languages, lots of code
-                samples and explanations of how the code works. There will also
-                be a sandbox where you can try out what you have learned during
-                the course.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-          <Accordion type='single' collapsible>
-            <AccordionItem value='item-1'>
-              <AccordionTrigger>Can I get certificate here?</AccordionTrigger>
-              <AccordionContent>
-                Yes. In the final update, certificates will be added for all
-                courses.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-          <Accordion type='single' collapsible>
-            <AccordionItem value='item-1'>
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-          <Accordion type='single' collapsible>
-            <AccordionItem value='item-1'>
-              <AccordionTrigger>How it works?</AccordionTrigger>
-              <AccordionContent>
-                Its easy. First things first you pick between free and paid
-                courses, you can find them in sidebar, then if the course is free,
-                you&apos;ll get full acces on the course and if its paid course the
-                notification will appear and after you pay, you&apos;ll get full
-                acces.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+        <div className='flex flex-col gap-y-5 mt-5 mx-5 lg:mr-12'>
+          {/** Creating box with introducing into Theory */}
+          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
+            <SchoolIcon sx={{ fontSize: 40 }} className='text-[#0f0]' />
+            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
+              What is Front-end and Backend, protocols for communication with
+              web, development environment for developers and much more.
+            </p>
+          </div>
+
+          {/** Creating box with introducing into HTML */}
+
+          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
+            <HtmlIcon sx={{ fontSize: 50 }} className='text-orange-600' />
+            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
+              What is HTML, types of tags, HTML history and so much examples and
+              code samples.
+            </p>
+          </div>
+
+          {/** Creating box with introducing into CSS */}
+          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
+            <CssIcon sx={{ fontSize: 50 }} className='text-blue-500' />
+            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
+              Why use Css, history of Css, information about preprocessor, Css
+              usage in practice and many examples and code samples.
+            </p>
+          </div>
+
+          {/** Creating box with introducing into JS */}
+          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
+            <JavascriptIcon sx={{ fontSize: 50 }} className='text-yellow-500' />
+            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
+              How JavaScript works, what frameworks have been built and many
+              more examples and code samples.
+            </p>
+          </div>
         </div>
       </section>
     </main>
