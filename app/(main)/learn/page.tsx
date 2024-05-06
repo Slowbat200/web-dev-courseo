@@ -94,8 +94,8 @@ const LearnPage = () => {
               <AccordionContent>
                 Its easy. First things first you pick between free and paid
                 courses, you can find them in sidebar, then if the course is free,
-                you'll get full acces on the course and if its paid course the
-                notification will appear and after you pay, you'll get full
+                you&apos;ll get full acces on the course and if its paid course the
+                notification will appear and after you pay, you&apos;ll get full
                 acces.
               </AccordionContent>
             </AccordionItem>
