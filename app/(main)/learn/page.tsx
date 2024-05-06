@@ -75,7 +75,8 @@ const LearnPage = () => {
             <AccordionItem value='item-1'>
               <AccordionTrigger>Can I get certificate here?</AccordionTrigger>
               <AccordionContent>
-                Yes. In the final update, certificates will be added for all courses.  
+                Yes. In the final update, certificates will be added for all
+                courses.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -89,9 +90,13 @@ const LearnPage = () => {
           </Accordion>
           <Accordion type='single' collapsible>
             <AccordionItem value='item-1'>
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionTrigger>How it works?</AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                Its easy. First things first you pick between free and paid
+                courses, you can find them in sidebar, then if the course is free,
+                you'll get full acces on the course and if its paid course the
+                notification will appear and after you pay, you'll get full
+                acces.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
