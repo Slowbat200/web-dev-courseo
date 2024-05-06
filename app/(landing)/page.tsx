@@ -19,7 +19,7 @@ import JavascriptIcon from '@mui/icons-material/Javascript';
 
 export default function Home() {
   return (
-    <main className='h-full w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative'>
+    <main className='h-fill lg:h-full w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative'>
       <div className='flex flex-col items-center justify-between p-16'>
         {/* Radial gradient for the container to give a faded look */}
         <div className='absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]'></div>
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='flex flex-col gap-y-5  pr-0 sm:pr-[3em]'>
+        <div className='flex flex-col gap-y-5 mt-5 pr-0 sm:pr-[3em]'>
           {/** Creating box with introducing into Theory */}
           <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
             <SchoolIcon sx={{ fontSize: 40 }} className='text-[#0f0]' />
