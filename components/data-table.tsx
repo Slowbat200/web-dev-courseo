@@ -1,12 +1,15 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react';
+import * as React from 'react';
+
 import {
   ColumnDef,
+  SortingState,
   flexRender,
   getCoreRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
   useReactTable,
-  getPaginationRowModel
 } from '@tanstack/react-table';
 
 import {
@@ -17,8 +20,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import CardComponent from './card-component'; // Import your CardComponent
+
 import { Button } from './ui/button';
+import { CardComponent } from './card-component';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -29,28 +33,30 @@ export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
-  const [activeCell, setActiveCell] = useState<string | null>(null); // State to track active cell
+  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [selectedRowIndex, setSelectedRowIndex] = React.useState<number | null>(null);
+
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel()
+    getPaginationRowModel: getPaginationRowModel(),
+    onSortingChange: setSorting,
+    getSortedRowModel: getSortedRowModel(),
+    state:{
+      sorting,
+    }
   });
 
-  // Function to handle cell click
-  const handleCellClick = (rowId: string, cellId: string) => {
-    setActiveCell(activeCell === cellId ? null : cellId); // Toggle active cell
-  };
 
   return (
     <div>
-    <div className='rounded-md border'>
-      <Table>
-        <TableHeader>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
+      <div className='rounded-md border'>
+        <Table>
+          <TableHeader>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
                   <TableHead key={header.id}>
                     {header.isPlaceholder
                       ? null
@@ -59,60 +65,65 @@ export function DataTable<TData, TValue>({
                           header.getContext()
                         )}
                   </TableHead>
-                );
-              })}
-            </TableRow>
-          ))}
-        </TableHeader>
-        <TableBody>
-          {table.getRowModel().rows?.length ? (
-            table.getRowModel().rows.map((row) => (
-              <React.Fragment key={row.id}>
-                <TableRow>
-                  {row.getVisibleCells().map((cell) => {
-                    const cellId = `${row.id}-${cell.id}`;
-                    return (
-                      <TableCell
-                        key={cell.id}
-                        onClick={() => handleCellClick(row.id, cellId)}
-                        className={cellId === activeCell ? 'active' : ''}
-                      >
-                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                ))}
+              </TableRow>
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows?.length ? (
+              table.getRowModel().rows.map((row, rowIndex) => (
+                <React.Fragment key={row.id}>
+                  <TableRow
+                    data-state={row.getIsSelected() && 'selected'}
+                    onClick={() => setSelectedRowIndex(rowIndex === selectedRowIndex ? null : rowIndex)}
+                  >
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
                       </TableCell>
-                    );
-                  })}
-                </TableRow>
-                {activeCell && activeCell.includes(row.id) && (
-                  <TableRow>
-                    <TableCell colSpan={columns.length}>
-                      <CardComponent />
-                    </TableCell>
+                    ))}
                   </TableRow>
-                )}
-              </React.Fragment>
-            ))
-          ) : (
-            <TableRow>
-              <TableCell colSpan={columns.length} className='h-24 text-center'>
-                No results.
-              </TableCell>
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
-    </div>
-    <div className="flex items-center justify-end space-x-2 py-4">
+                  {selectedRowIndex === rowIndex && (
+                    <TableRow>
+                      <TableCell colSpan={columns.length}>
+                        <CardComponent //@ts-ignore
+                          cardName={row.original.cardName} //@ts-ignore
+                          cardDescription={row.original.cardDescription} //@ts-ignore
+                          cardCode={row.original.cardCode}
+                        />
+                      </TableCell>
+                    </TableRow>
+                  )}
+                </React.Fragment>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell
+                  colSpan={columns.length}
+                  className='h-24 text-center'
+                >
+                  No results.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+      <div className='flex items-center justify-end space-x-2 py-4'>
         <Button
-          variant="outline"
-          size="sm"
+          variant='outline'
+          size='sm'
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
           Previous
         </Button>
         <Button
-          variant="outline"
-          size="sm"
+          variant='outline'
+          size='sm'
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
