@@ -1,5 +1,6 @@
 import { DataTable } from '@/components/data-table';
 import { Tags, columns } from './columns';
+import Intro from './_components/intro';
 
 async function getData(): Promise<Tags[]> {
   return [
@@ -603,11 +604,13 @@ async function getData(): Promise<Tags[]> {
 export default async function Html() {
   const data = await getData();
   return (
-    <section className='py-24'>
-      <div className='container'>
-        <h1 className='text-4xl font-bold'>HTML</h1>
-        <DataTable columns={columns} data={data} />
+    <section className='py-16'>
+      <div>
+        <Intro />
       </div>
+      {/* <div className='container'>
+        <DataTable columns={columns} data={data} />
+      </div> */}
     </section>
   );
 }
