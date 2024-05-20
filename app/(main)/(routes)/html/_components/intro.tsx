@@ -1,4 +1,9 @@
+'use client'
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+
 export default function Intro() {
+  const router = useRouter()
   return (
     <div className='pr-5'>
       <h1 className='text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center'>
@@ -7,13 +12,13 @@ export default function Intro() {
       <article>
         <p className='text-md pt-5 lg:text-lg xl:text-xl 2xl:text-2xl'>
           Welcome to the HTML course. I hope you liked the previouse course. So
-          before we start let's have a quick overview of what this course is all
+          before we start let&apos;s have a quick overview of what this course is all
           about.
         </p>
       </article>
       <div className='flex justify-center items-center'>
         <div className=' w-full'>
-          <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center pt-5'>
+          <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center pt-5 mt-10'>
             What you find here?
           </h1>
           <article className='grid grid-cols-3 gap-x-5 gap-y-5 pt-10'>
@@ -22,59 +27,73 @@ export default function Intro() {
                 In the beginning you will learn some basic information about
                 HTML such as:
               </p>
-              <ul className='pl-5 leading-8'>
+              <ul className='pl-5 leading-relaxed'>
                 <li className='list-decimal'>
-                  <p>What is HTML?</p>
+                  <p>What is HTML and how does it work?</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>How does it work?</p>
+                  <p>History and Evolution of HTML?</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>What is the purpose of HTML?</p>
+                  <p>Overview of HTML5?</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>History of HTML?</p>
+                  <p>Basic HTML structure?</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>and I'll introduce you into HTML tags.</p>
+                  <p>Introduction to HTML tags and so much more</p>
                 </li>
               </ul>
             </span>
             <span className='flex flex-col gap-y-5'>
-              <p>Then I'll tell you something more advanced.</p>
-              <ul className='pl-5'>
+              <p>Then I&apos;ll tell you something more advanced.</p>
+              <ul className='pl-5 leading-relaxed pt-5'>
                 <li className='list-decimal'>
-                  <p>How to write clear code.</p>
+                  <p>HTML5 Semantic Elements.</p>
+                </li>
+                <li className='list-decimal'>
+                  <p>HTML5 Form Elements and Validation.</p>
+                </li>
+                <li className='list-decimal'>
+                  <p>HTML5 Multimedia and Embedding.</p>
+                </li>
+                <li className='list-decimal'>
+                  <p>HTML5 APIs.</p>
+                </li>
+                <li className='list-decimal'>
+                  <p>Responsive design and SEO Best Practices.</p>
                 </li>
               </ul>
             </span>
             <span className='flex flex-col gap-y-5'>
               <p>
-                And finally I'll show you some things for total experts. Such as:
+                And finally I&apos;ll show you some things for total experts. Such
+                as:
               </p>
               <ul className='pl-5'>
                 <li className='list-decimal leading-8'>
-                  <p>Creating complexing websites.</p>
+                  <p>Progressive Web Apps (PWAs).</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusamus officiis quibusdam fugiat voluptates natus
-                    suscipit, consectetur beatae explicabo magnam facere debitis
-                    neque! Repellat maiores provident ipsum reprehenderit, ad
-                    dolorem cupiditate?
-                  </p>
+                  <p>Advanced HTML5 APIs.</p>
+                </li>
+                <li className='list-decimal'>
+                  <p>Custom Elements and Shadow DOM.</p>
+                </li>
+                <li className='list-decimal'>
+                  <p>HTML and JavaScript Integration.</p>
+                </li>
+                <li className='list-decimal'>
+                  <p>Performance Optimization.</p>
                 </li>
               </ul>
             </span>
           </article>
         </div>
       </div>
-      {/* <p className="text-md pt-5 lg:text-lg xl:text-xl 2xl:text-2xl text-center">
-        HTML (HyperText Markup Language) is the standard markup language for
-        creating web pages. It describes the structure of a web page semantically
-        and originally included cues for the appearance of the document.
-      </p> */}
+      <div className='flex justify-center items-center mt-10 pt-5'>
+        <Button variant={"outline"} onClick={() => router.push('section') }>Lets Begin</Button>
+      </div>
     </div>
   );
 }

@@ -608,7 +608,7 @@ export default async function Html() {
       <div>
         <Intro />
       </div>
-      {/* <div className='container'>
+      {/* <div className='container pt-10'>
         <DataTable columns={columns} data={data} />
       </div> */}
     </section>
