@@ -1,7 +1,11 @@
+import Intro from './_components/intro';
+
 const Development = () => {
-    return ( 
-        <div>development</div>
-     );
-}
- 
+  return (
+    <div>
+      <Intro />
+    </div>
+  );
+};
+
 export default Development;
