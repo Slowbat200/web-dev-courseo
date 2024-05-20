@@ -41,7 +41,7 @@ export default function Intro() {
                   <p>Basic HTML structure?</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Introduction to HTML tags and so much more</p>
+                  <p>Introduction to HTML tags and so much more.</p>
                 </li>
               </ul>
             </span>
@@ -61,7 +61,7 @@ export default function Intro() {
                   <p>HTML5 APIs.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Responsive design and SEO Best Practices.</p>
+                  <p>Responsive design and SEO Best Practices and so much more.</p>
                 </li>
               </ul>
             </span>
@@ -84,7 +84,7 @@ export default function Intro() {
                   <p>HTML and JavaScript Integration.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Performance Optimization.</p>
+                  <p>Performance Optimization and so much more.</p>
                 </li>
               </ul>
             </span>

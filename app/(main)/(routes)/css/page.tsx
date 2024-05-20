@@ -1,6 +1,8 @@
+import Intro from "./_components/intro";
+
 const cssPage = () => {
     return ( 
-        <div>Css</div>
+        <div><Intro /></div>
      );
 }
  

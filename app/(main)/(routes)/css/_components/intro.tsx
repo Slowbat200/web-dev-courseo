@@ -1,54 +1,49 @@
 'use client';
-
 import { Button } from '@/components/ui/button';
-import { useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 
 export default function Intro() {
-  const { user, isLoaded, isSignedIn } = useUser();
   const router = useRouter();
-  if (!isLoaded || !isSignedIn) return null;
   return (
-    <section>
-      <div className='container'>
-        <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center py-5 font-bold'>
-          Introduction to Development
-        </h1>
-        <p className='leading-7'>
-          Hello {user.fullName || user.username} welcome to the development
-          section, where you can learn how websites works, what is the
-          difference between frontend and backend, which protocols are important
-          for web development, and more.
+    <div className='pr-5 pt-5'>
+      <h1 className='text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center'>
+        Introduction to HTML
+      </h1>
+      <article>
+        <p className='text-md pt-5 lg:text-lg xl:text-xl 2xl:text-2xl'>
+          Welcome to the CSS course. I see you did well in previous two courses.
+          So I hope you are ready for little bit styling. Yes I talking about
+          CSS, here in this course I will try to teach you how to style your
+          websites. Before we start let&apos;s have a quick overview of what
+          this course is all about.
         </p>
-      </div>
+      </article>
       <div className='flex justify-center items-center'>
         <div className=' w-full'>
           <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center pt-5 mt-10'>
             What you find here?
           </h1>
-          <article className='grid lg:grid-cols-3 grid-cols-1 gap-x-5 gap-y-5 pt-10'>
+          <article className='grid grid-cols-3 gap-x-5 gap-y-5 pt-10'>
             <span className='flex flex-col gap-y-5'>
               <p>
-                In the beginning you will learn some basic information about Web
-                development such as:
+                In the beginning you will learn some basic information about
+                HTML such as:
               </p>
               <ul className='pl-5 leading-relaxed'>
                 <li className='list-decimal'>
-                  <p>Introduction to Web Development?</p>
+                  <p>What is CSS?</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Which Web Development Tools you should use?</p>
+                  <p>CSS Syntax and how to link it to HTML.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>
-                    What is Frontend, Backend and <br /> Fullstack development?
-                  </p>
+                  <p>Basic styling.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Basic Frontend Frameworks.</p>
+                  <p>How to use box model?</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Version Control with Git and so much more.</p>
+                  <p>Selectors, Combinators and so much more.</p>
                 </li>
               </ul>
             </span>
@@ -56,19 +51,19 @@ export default function Intro() {
               <p>Then I&apos;ll tell you something more advanced.</p>
               <ul className='pl-5 leading-relaxed pt-5'>
                 <li className='list-decimal'>
-                  <p>Front-End Frameworks.</p>
+                  <p>Advanced Selectors.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Backend Development.</p>
+                  <p>Advanced Styling.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Build Tools and Package Managers.</p>
+                  <p>Responsive Design.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>APIs.</p>
+                  <p>Flex box and Grid layout.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Responsive Design and Accessibility.</p>
+                  <p>Typography and so much more.</p>
                 </li>
               </ul>
             </span>
@@ -79,33 +74,30 @@ export default function Intro() {
               </p>
               <ul className='pl-5'>
                 <li className='list-decimal leading-8'>
-                  <p>Advanced Backend Development.</p>
+                  <p>Advanced Animations and Transitions.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>DevOps and Deployment.</p>
+                  <p>CSS Architecture and Methodologies.</p>
+                </li>
+                <li className='list-decimal'>
+                  <p>Preprocessors and frameworks.</p>
                 </li>
                 <li className='list-decimal'>
                   <p>Performance Optimization.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Progressive Web Apps (PWAs).</p>
-                </li>
-                <li className='list-decimal'>
-                  <p>Testing and Quality Assurance and so much more.</p>
+                  <p>Advanced Responsive Design and so much more.</p>
                 </li>
               </ul>
             </span>
           </article>
         </div>
       </div>
-      <div className='flex justify-center items-center mt-10 pb-5'>
-        <Button
-          variant='outline'
-          onClick={() => router.push('/development/basic-web-development')}
-        >
-          Lets roll
+      <div className='flex justify-center items-center mt-10 py-5'>
+        <Button variant={'outline'} onClick={() => router.push('section')}>
+          Learn more
         </Button>
       </div>
-    </section>
+    </div>
   );
 }

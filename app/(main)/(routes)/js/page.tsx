@@ -1,7 +1,11 @@
+import Intro from './_components/intro';
+
 const javascriptPage = () => {
-    return ( 
-        <div>Javascript</div>
-     );
-}
- 
+  return (
+    <div>
+      <Intro />
+    </div>
+  );
+};
+
 export default javascriptPage;
