@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div className='flex flex-col items-center gap-y-8'>
             {/* Displays the main heading of the page */}
-            <h1 className='text-xl lg:text-3xl font-bold text-neutral-200 max-w-[480px] text-center'>
+            <h1 className='text-xl lg:text-3xl font-bold dark:text-neutral-200 text-neutral-800 max-w-[480px] text-center'>
               Learn, practice, and master new technologies.
             </h1>
             {/* Displays a loader while Clerk is loading */}
