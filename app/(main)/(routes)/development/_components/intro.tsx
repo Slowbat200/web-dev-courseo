@@ -100,6 +100,7 @@ export default function Intro() {
       </div>
       <div className='flex justify-center items-center mt-10 pb-5'>
         <Button
+        disabled
           variant='outline'
           onClick={() => router.push('/development/basic-web-development')}
         >

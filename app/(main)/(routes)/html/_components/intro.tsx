@@ -92,7 +92,7 @@ export default function Intro() {
         </div>
       </div>
       <div className='flex justify-center items-center mt-10 pt-5'>
-        <Button variant={"outline"} onClick={() => router.push('section') }>Lets Begin</Button>
+        <Button disabled variant={"outline"} onClick={() => router.push('section') }>Lets Begin</Button>
       </div>
     </div>
   );
