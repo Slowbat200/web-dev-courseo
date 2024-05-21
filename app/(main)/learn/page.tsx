@@ -42,11 +42,11 @@ const LearnPage = () => {
 
         <Modal
           title='Basic information'
-          description='So first things first, there are four free courses. 
-          They are Web development, Html, Css and JavaScript. 
-          Then there are courses that are paid. They are TailwindCSS, React and Next.js. 
-          In each course you can find informations for begginers, intermediates and proffesionals.'
-        />
+          description='There are Free and Paid courses.
+          Free courses: Web development, Html, Css and JavaScript. 
+          Paid courses: TailwindCSS, React and Next.js. 
+          At each course you can find information for all levels of knowledge'
+          />
       </section>
       <section id='more-info'>
         <div className='pt-5 px-5'>
