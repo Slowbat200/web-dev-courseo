@@ -63,7 +63,7 @@ const LearnPage = () => {
           {/** Creating box with introducing into Theory */}
           <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
             <SchoolIcon sx={{ fontSize: 40 }} className='text-[#0f0]' />
-            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
+            <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
               What is Front-end and Backend, protocols for communication with
               web, development environment for developers and much more.
             </p>
@@ -73,7 +73,7 @@ const LearnPage = () => {
 
           <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
             <HtmlIcon sx={{ fontSize: 50 }} className='text-orange-600' />
-            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
+            <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
               What is HTML, types of tags, HTML history and so much examples and
               code samples.
             </p>
@@ -82,7 +82,7 @@ const LearnPage = () => {
           {/** Creating box with introducing into CSS */}
           <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
             <CssIcon sx={{ fontSize: 50 }} className='text-blue-500' />
-            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
+            <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
               Why use Css, history of Css, information about preprocessor, Css
               usage in practice and many examples and code samples.
             </p>
@@ -91,7 +91,7 @@ const LearnPage = () => {
           {/** Creating box with introducing into JS */}
           <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
             <JavascriptIcon sx={{ fontSize: 50 }} className='text-yellow-500' />
-            <p className='text-muted-foreground leading-7 [&:not(:first-child)]:mt-6'>
+            <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
               How JavaScript works, what frameworks have been built and many
               more examples and code samples.
             </p>
