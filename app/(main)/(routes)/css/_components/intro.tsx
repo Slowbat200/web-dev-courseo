@@ -23,7 +23,7 @@ export default function Intro() {
           <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center pt-5 mt-10'>
             What you find here?
           </h1>
-          <article className='grid grid-cols-3 gap-x-5 gap-y-5 pt-10'>
+          <article className='grid lg:grid-cols-3 grid-cols-1 gap-x-5 gap-y-5 pt-10'>
             <span className='flex flex-col gap-y-5'>
               <p>
                 In the beginning you will learn some basic information about
