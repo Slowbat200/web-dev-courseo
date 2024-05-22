@@ -42,11 +42,20 @@ const LearnPage = () => {
 
         <Modal
           title='Basic information'
-          description='There are Free and Paid courses.
-          Free courses: Web development, Html, Css and JavaScript. 
-          Paid courses: TailwindCSS, React and Next.js. 
-          At each course you can find information for all levels of knowledge'
-          />
+          description={[
+            'There are Free and Paid courses.',
+            'Free courses:',
+            '- Web development',
+            '- Html',
+            '- Css',
+            '- JavaScript',
+            'Paid courses:',
+            '- TailwindCSS',
+            '- React',
+            '- Next.js',
+            'At each course you can find information for all levels of knowledge',
+          ].map((text, index) => <p className='text-sm md:text-md lg:text-[18px] lg:leading-8 pl-2' key={index}>{text}</p>)}
+        />
       </section>
       <section id='more-info'>
         <div className='pt-5 px-5'>

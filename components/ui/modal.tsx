@@ -14,11 +14,15 @@ import Link from 'next/link';
 
 interface ModalProps {
   title: string;
-  description: string;
+  description: React.ReactNode[];
   children?: React.ReactNode;
 }
 
-export const Modal = ({ title, description, children }: ModalProps) => {
+export const Modal = ({
+  title,
+  description,
+  children,
+}: ModalProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
