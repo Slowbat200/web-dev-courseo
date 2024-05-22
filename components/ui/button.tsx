@@ -20,7 +20,7 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline',
         modal:'dark:text-violet-300 text-black outline outline-violet-500',
         sidebar_button:
-          'bg-primary text-slate-200 dark:text-slate-700 border-2 border-transparent dark:hover:bg-slate-100 hover:bg-sky-500/80 transition-none',
+          'bg-primary/80 dark:bg-primary text-slate-200 dark:text-slate-700 border-2 border-transparent dark:hover:bg-slate-100 hover:bg-sky-500/80 transition-none',
         sidebar_outline:
           'dark:bg-white dark:text-slate-700 active:text-black outline-sky-500 outline-4 outline hover:bg-sky-500/20 transition-none',
         landing:

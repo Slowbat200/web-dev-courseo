@@ -8,7 +8,7 @@ export const MobileSidebar = () => {
             <SheetTrigger className='lg:hidden'>
                 <Menu />
             </SheetTrigger>
-            <SheetContent side='left' className='p-0 bg-secondary z-[100] w-32 '>
+            <SheetContent side='left' className='p-0 bg-secondary z-[100] w-fit '>
                 <Sidebar />
             </SheetContent>
         </Sheet>
