@@ -10,7 +10,7 @@ export default function Intro() {
         Introduction to HTML
       </h1>
       <article>
-        <p className='text-md pt-5 lg:text-lg xl:text-xl 2xl:text-2xl'>
+        <p className='text-md pt-5 lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed pl-5 lg:pl-0 text-justify'>
           Welcome to the CSS course. I see you did well in previous two courses.
           So I hope you are ready for little bit styling. Yes I talking about
           CSS, here in this course I will try to teach you how to style your
@@ -24,7 +24,7 @@ export default function Intro() {
             What you find here?
           </h1>
           <article className='grid lg:grid-cols-3 grid-cols-1 gap-x-5 gap-y-5 pt-10'>
-            <span className='flex flex-col gap-y-5'>
+            <span className='flex flex-col gap-y-5 px-5 lg:px-0'>
               <p>
                 In the beginning you will learn some basic information about
                 HTML such as:
@@ -47,9 +47,9 @@ export default function Intro() {
                 </li>
               </ul>
             </span>
-            <span className='flex flex-col gap-y-5'>
+            <span className='flex flex-col gap-y-5 px-5 pt-5 lg:px-0 lg:pt-0'>
               <p>Then I&apos;ll tell you something more advanced.</p>
-              <ul className='pl-5 leading-relaxed pt-5'>
+              <ul className='pl-5 leading-relaxed'>
                 <li className='list-decimal'>
                   <p>Advanced Selectors.</p>
                 </li>
@@ -67,12 +67,12 @@ export default function Intro() {
                 </li>
               </ul>
             </span>
-            <span className='flex flex-col gap-y-5'>
+            <span className='flex flex-col gap-y-5 px-5 pt-5 lg:px-0 lg:pt-0'>
               <p>
                 And finally I&apos;ll show you some things for total experts.
                 Such as:
               </p>
-              <ul className='pl-5'>
+              <ul className='pl-5 leading-relaxed'>
                 <li className='list-decimal leading-8'>
                   <p>Advanced Animations and Transitions.</p>
                 </li>

@@ -14,7 +14,7 @@ export default function Intro() {
         <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center py-5 font-bold'>
           Introduction to Development
         </h1>
-        <p className='leading-7'>
+        <p className='leading-7 text-justify'>
           Hello {user.fullName || user.username} welcome to the development
           section, where you can learn how websites works, what is the
           difference between frontend and backend, which protocols are important
@@ -27,7 +27,7 @@ export default function Intro() {
             What you find here?
           </h1>
           <article className='grid lg:grid-cols-3 grid-cols-1 gap-x-5 gap-y-5 pt-10'>
-            <span className='flex flex-col gap-y-5'>
+            <span className='flex flex-col gap-y-5 px-5 lg:px-0'>
               <p>
                 In the beginning you will learn some basic information about Web
                 development such as:
@@ -52,9 +52,9 @@ export default function Intro() {
                 </li>
               </ul>
             </span>
-            <span className='flex flex-col gap-y-5'>
+            <span className='flex flex-col gap-y-5 px-5 pt-5 lg:px-0 lg:pt-0'>
               <p>Then I&apos;ll tell you something more advanced.</p>
-              <ul className='pl-5 leading-relaxed pt-5'>
+              <ul className='pl-5 leading-relaxed '>
                 <li className='list-decimal'>
                   <p>Front-End Frameworks.</p>
                 </li>
@@ -72,7 +72,7 @@ export default function Intro() {
                 </li>
               </ul>
             </span>
-            <span className='flex flex-col gap-y-5'>
+            <span className='flex flex-col gap-y-5 px-5 pt-5 lg:px-0 lg:pt-0'>
               <p>
                 And finally I&apos;ll show you some things for total experts.
                 Such as:
