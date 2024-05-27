@@ -13,7 +13,7 @@ export default function Intro() {
           </h2>
           <p className='text-lg'>
             Welcome to our beginner web development journey. In this lesson,
-            we'll explore what web development is all about and the various
+            we&apos;ll explore what web development is all about and the various
             roles involved in creating websites and web applications so what is
             web development?
           </p>

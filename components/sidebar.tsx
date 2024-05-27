@@ -47,7 +47,7 @@ export const Sidebar = ({ className }: Props) => {
         <SidebarItem label='JavaScript' href='/js' iconSrc={jsIcon} />
         <SidebarItem label='React' href='/react' iconSrc={IconReact} />
         <SidebarItem label='TailwindCSS' href='/tailwindcss' iconSrc={tailwindcssIcon} />
-        <SidebarItem label='Next' href='/next' iconSrc={IconNext} />
+        <SidebarItem label='Next.JS' href='/next' iconSrc={IconNext} />
       <div className='lg:flex lg:flex-row hidden relative bottom-0 right-0 flex-1 gap-x-3'>
         <ThemeToggle />
         <UserButton afterSignOutUrl='/' />
