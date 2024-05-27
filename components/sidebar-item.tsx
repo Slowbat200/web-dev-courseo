@@ -10,19 +10,20 @@ type Props = {
   label: string;
   href: string;
   iconSrc: IconType;
+  className?: string;
 };
 
-export const SidebarItem = ({ label, iconSrc: Icon, href }: Props) => {
+export const SidebarItem = ({ label, iconSrc: Icon, href, className }: Props) => {
   const pathName = usePathname();
   const active = pathName === href;
   return (
     <Button
       variant={active? 'sidebar_outline' : 'sidebar_button'}
-      className='justify-start h-[52px] w-[100%]'
+      className={`justify-start h-[52px] w-[100%] ${className}`}
       asChild
     >
       <Link href={href}>
-        <Icon className='mr-5' width={32} height={32} />
+        <Icon className='mr-8 ' width={32} height={32} />
         {label}
       </Link>
     </Button>

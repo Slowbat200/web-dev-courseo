@@ -9,6 +9,9 @@ import CssIcon from '@mui/icons-material/Css';
 import SchoolIcon from '@mui/icons-material/School';
 import HtmlIcon from '@mui/icons-material/Html';
 import JavascriptIcon from '@mui/icons-material/Javascript';
+import Image from 'next/image';
+import IconReact from '@/icons/icon';
+import IconNext from '@/icons/next';
 
 const LearnPage = () => {
   const { user, isLoaded, isSignedIn } = useUser();
@@ -54,10 +57,17 @@ const LearnPage = () => {
             '- React',
             '- Next.js',
             'At each course you can find information for all levels of knowledge',
-          ].map((text, index) => <p className='text-sm md:text-md lg:text-[18px] lg:leading-8 pl-2' key={index}>{text}</p>)}
+          ].map((text, index) => (
+            <p
+              className='text-sm md:text-md lg:text-[18px] lg:leading-8 pl-2'
+              key={index}
+            >
+              {text}
+            </p>
+          ))}
         />
       </section>
-      <section id='more-info'>
+      <section id='more-info' className='h-full py-10'>
         <div className='pt-5 px-5'>
           <h2 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center'>
             What you can find here
@@ -97,12 +107,43 @@ const LearnPage = () => {
             </p>
           </div>
 
-          {/** Creating box with introducing into JS */}
+          {/** Creating box with introducing into JS. */}
           <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
             <JavascriptIcon sx={{ fontSize: 50 }} className='text-yellow-500' />
             <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
               How JavaScript works, what frameworks have been built and many
               more examples and code samples.
+            </p>
+          </div>
+          {/** Creating box with introducing into React. Only for subscribers */}
+          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
+            <IconReact className='text-blue-400 w-10 h-10' />
+            <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
+              What is difference between React and Javascript, examples of most
+              popular frameworks and many more examples and code samples.
+            </p>
+          </div>
+          {/** Creating box with introducing into Tailwindcss. Only for subscribers */}
+          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
+            <Image
+              src={'/tailwind-css.svg'}
+              alt='tailwindcss'
+              width={40}
+              height={40}
+            />
+            <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
+              Introduction of the modern and popular css framework Tailwindcss
+              and how to use it for styling your components.
+            </p>
+          </div>
+          {/* Creating box with introducing into Next.js. Only for subscribers */}
+          <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
+            <IconNext className='text-primary w-10 h-10' />
+            <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
+              Introduction of the modern and popular framework for building
+              server-side rendered web applications called Next.js and how to
+              use it for building your web applications with examples and code
+              samples.
             </p>
           </div>
         </div>

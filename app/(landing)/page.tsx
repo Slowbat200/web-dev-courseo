@@ -35,22 +35,49 @@ export default function Home() {
       <div className=' max-w-[1500px] mx-auto w-full flex flex-col lg:flex-row flex-1 items-center justify-center gap-y-10 gap-x-10'>
         <div className='lg:w-[900px] w-full flex flex-col gap-y-10'>
           <div className='flex flex-col gap-y-2 mx-[3em]'>
-            <h1 className='text-[22px] md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center'>
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className='text-[22px] md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center'
+            >
               {' '}
               Here you will find:
-            </h1>
-            <p className='px-2 lg:text-lg leading-7 text-justify [&:not(:first-child)]:mt-6 '>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 1,
+                easeIn: [0, 0.83, 0.2, 1.01],
+              }}
+              className='px-2 lg:text-lg leading-7 text-justify [&:not(:first-child)]:mt-6 '
+            >
               Theory about what is web development and how to create simple or
               modern websites. How to create websites yourself or using websites
               builders. How does the website work, what languages are used here
               and what frameworks are associated with languages.
-            </p>
+            </motion.p>
           </div>
           <div className='flex flex-col items-center gap-y-8'>
             {/* Displays the main heading of the page */}
-            <h1 className='text-xl lg:text-3xl font-bold dark:text-neutral-200 text-neutral-800 max-w-[480px] text-center'>
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1.2 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                easeInOut: 'easeInOut',
+              }}
+              className='text-xl lg:text-3xl font-bold dark:text-neutral-200 text-neutral-800 max-w-[480px] text-center'
+            >
               Learn, practice, and master new technologies.
-            </h1>
+            </motion.h1>
             {/* Displays a loader while Clerk is loading */}
             <div className='flex flex-col items-center gap-y-3 max-w-[330px] w-full'>
               <ClerkLoading>
