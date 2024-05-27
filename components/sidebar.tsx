@@ -7,7 +7,7 @@ import { Poppins } from 'next/font/google';
 import { ThemeToggle } from './theme-toggle';
 import { UserButton } from '@clerk/nextjs';
 import {schoolIcon, htmlIcon, cssIcon, jsIcon, devIcon, tailwindcssIcon} from './icon-wrapper'; // Adjust the import path accordingly
-import IconReact from '@/icons/icon';
+import IconReact from '@/icons/react';
 import IconNext from '@/icons/next';
 
 
@@ -48,7 +48,7 @@ export const Sidebar = ({ className }: Props) => {
         <SidebarItem label='React' href='/react' iconSrc={IconReact} />
         <SidebarItem label='TailwindCSS' href='/tailwindcss' iconSrc={tailwindcssIcon} />
         <SidebarItem label='Next.js' href='/next' iconSrc={IconNext} />
-      <div className='lg:flex lg:flex-row hidden relative bottom-0 right-0 flex-1 gap-x-3'>
+      <div className='lg:flex lg:flex-row hidden relative bottom-0 right-0 flex-1 gap-x-3 pb-5'>
         <ThemeToggle />
         <UserButton afterSignOutUrl='/' />
       </div>

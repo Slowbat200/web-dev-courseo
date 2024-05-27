@@ -10,7 +10,6 @@ import SchoolIcon from '@mui/icons-material/School';
 import HtmlIcon from '@mui/icons-material/Html';
 import JavascriptIcon from '@mui/icons-material/Javascript';
 import Image from 'next/image';
-import IconReact from '@/icons/icon';
 import IconNext from '@/icons/next';
 
 const LearnPage = () => {
@@ -117,7 +116,12 @@ const LearnPage = () => {
           </div>
           {/** Creating box with introducing into React. Only for subscribers */}
           <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
-            <IconReact className='text-blue-400 w-10 h-10' />
+            <Image
+              src={'/react.svg'}
+              alt='react'
+              width={40}
+              height={40}
+            />
             <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
               What is difference between React and Javascript, examples of most
               popular frameworks and many more examples and code samples.
@@ -138,7 +142,7 @@ const LearnPage = () => {
           </div>
           {/* Creating box with introducing into Next.js. Only for subscribers */}
           <div className='flex gap-x-5 flex-row px-2 ml-0 sm:ml-[5em] py-3 w-[90%]'>
-            <IconNext className='text-primary w-10 h-10' />
+            <IconNext className='w-[150px] h-[150px] lg:w-[50px] lg:h-[50px]'/>
             <p className='dark:text-muted-foreground text-neutral-800 leading-7 [&:not(:first-child)]:mt-6'>
               Introduction of the modern and popular framework for building
               server-side rendered web applications called Next.js and how to
