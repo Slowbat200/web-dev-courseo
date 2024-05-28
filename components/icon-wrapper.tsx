@@ -4,7 +4,6 @@ import HtmlIcon from '@mui/icons-material/Html';
 import CssIcon from '@mui/icons-material/Css';
 import JavascriptIcon from '@mui/icons-material/Javascript';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
-import TailwindcssIcon from '@mui/icons-material/DeveloperMode';
 
 export function schoolIcon(props: any) {
   return <SchoolIcon {...props} />;
@@ -17,9 +16,6 @@ export function cssIcon(props: any) {
 }
 export function jsIcon(props: any) {
   return <JavascriptIcon {...props}/>
-}
-export function tailwindcssIcon(props: any) {
-  return <TailwindcssIcon {...props} />;
 }
 
 export function devIcon(props: any){

@@ -6,9 +6,10 @@ import Link from 'next/link';
 import { Poppins } from 'next/font/google';
 import { ThemeToggle } from './theme-toggle';
 import { UserButton } from '@clerk/nextjs';
-import {schoolIcon, htmlIcon, cssIcon, jsIcon, devIcon, tailwindcssIcon} from './icon-wrapper'; // Adjust the import path accordingly
+import {schoolIcon, htmlIcon, cssIcon, jsIcon, devIcon} from './icon-wrapper'; // Adjust the import path accordingly
 import IconReact from '@/icons/react';
 import IconNext from '@/icons/next';
+import IcontTailwind from '@/icons/tailwind';
 
 
 type Props = {
@@ -46,7 +47,7 @@ export const Sidebar = ({ className }: Props) => {
         <SidebarItem label='Css' href='/css' iconSrc={cssIcon}/>
         <SidebarItem label='JavaScript' href='/js' iconSrc={jsIcon} />
         <SidebarItem label='React' href='/react' iconSrc={IconReact} />
-        <SidebarItem label='TailwindCSS' href='/tailwindcss' iconSrc={tailwindcssIcon} />
+        <SidebarItem label='TailwindCSS' href='/tailwindcss' iconSrc={IcontTailwind} />
         <SidebarItem label='Next.js' href='/next' iconSrc={IconNext} />
       <div className='lg:flex lg:flex-row hidden relative bottom-0 right-0 flex-1 gap-x-3 pb-5'>
         <ThemeToggle />

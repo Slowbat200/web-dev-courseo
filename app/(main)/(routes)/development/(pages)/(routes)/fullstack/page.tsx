@@ -13,7 +13,7 @@ const Fullstack = () => {
           Node.js, Python, and Java. This holistic approach allows us to build
           seamless, responsive, and feature-rich web applications.
         </p>
-      </div>1
+      </div>
     </div>
   );
 };

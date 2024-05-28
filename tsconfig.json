@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "icons/react.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "icons/react.tsx", "app/(main)/(routes)/development/(pages)/(routes)/frontend/page.tsx"],
   "exclude": ["node_modules"]
 }
