@@ -39,7 +39,7 @@ const Backend = () => {
             CSS
           </button>{' '}
           takes care of that and of course you can move your character and
-          that's{' '}
+          that&apos;s{' '}
           <button
             onClick={() => router.push('/javascript')}
             className='font-bold text-white'
