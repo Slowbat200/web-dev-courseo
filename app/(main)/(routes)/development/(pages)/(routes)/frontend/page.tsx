@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 
-const frontend = () => {
+const Frontend = () => {
   const router = useRouter();
   return (
     <div className='w-full h-full '>
@@ -50,4 +50,4 @@ const frontend = () => {
     </div>
   );
 };
-export default frontend;
+export default Frontend;
