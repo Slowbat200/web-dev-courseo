@@ -1,6 +1,6 @@
 import { UserButton } from "@clerk/nextjs";
-import { MobileSidebar } from "./mobile-sidebar";
 import { ThemeToggle } from "./theme-toggle";
+import { MobileSidebar } from "./mobile-sidebar";
 
 export const MobileHeader = () => {
   return (

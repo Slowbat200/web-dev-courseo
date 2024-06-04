@@ -1,13 +1,11 @@
 'use client'
 
-import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
 import { Button } from '@/components/ui/button';
 import Intro from './_components/intro';
 
 const Development = () => {
   const { user, isLoaded, isSignedIn } = useUser();
-  const router = useRouter();
   if (!isLoaded || !isSignedIn) return null;
 
   const onClick = () => {
@@ -43,12 +41,12 @@ const Development = () => {
                 <p>Introduction to Web Development?</p>
               </li>
               <li className='list-decimal'>
-                <p>Which Web Development Tools you should use?</p>
-              </li>
-              <li className='list-decimal'>
                 <p>
                   What is Frontend, Backend and <br /> Fullstack development?
                 </p>
+              </li>
+              <li className='list-decimal'>
+                <p>Which Web Development Tools you should use?</p>
               </li>
               <li className='list-decimal'>
                 <p>Basic Frontend Frameworks.</p>
