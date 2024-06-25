@@ -608,8 +608,8 @@ export default async function Html() {
       <div>
         <Intro />
       </div>
-      <div className='container pt-10'>
-        <DataTable columns={columns} data={data} />
+      <div className='container pt-16'>
+        {/* <DataTable columns={columns} data={data} /> */}
       </div>
     </section>
   );

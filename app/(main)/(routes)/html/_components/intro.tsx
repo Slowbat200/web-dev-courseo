@@ -1,9 +1,14 @@
-'use client'
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+'use client';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
+import BegginerPage from '../(pages)/(routes)/(beginner)/page';
 
 export default function Intro() {
-  const router = useRouter()
+  const router = useRouter();
+  const onClick = () => {
+    const section = document.getElementById('section');
+    section?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <div className='pr-5'>
       <h1 className='text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center'>
@@ -12,8 +17,8 @@ export default function Intro() {
       <article>
         <p className='text-md pt-5 lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed pl-5 lg:px-0 text-justify'>
           Welcome to the HTML course. I hope you liked the previouse course. So
-          before we start let&apos;s have a quick overview of what this course is all
-          about.
+          before we start let&apos;s have a quick overview of what this course
+          is all about.
         </p>
       </article>
       <div className='flex justify-center items-center'>
@@ -61,14 +66,16 @@ export default function Intro() {
                   <p>HTML5 APIs.</p>
                 </li>
                 <li className='list-decimal'>
-                  <p>Responsive design and SEO Best Practices and so much more.</p>
+                  <p>
+                    Responsive design and SEO Best Practices and so much more.
+                  </p>
                 </li>
               </ul>
             </span>
             <span className='flex flex-col gap-y-5 lg:pl-0 lg:pt-0 pl-8 pt-5'>
               <p>
-                And finally I&apos;ll show you some things for total experts. Such
-                as:
+                And finally I&apos;ll show you some things for total experts.
+                Such as:
               </p>
               <ul className='pl-5'>
                 <li className='list-decimal leading-8'>
@@ -92,7 +99,12 @@ export default function Intro() {
         </div>
       </div>
       <div className='flex justify-center items-center mt-10 pt-5'>
-        <Button disabled variant={"outline"} onClick={() => router.push('section') }>Lets Begin</Button>
+        <Button variant={'outline'} onClick={onClick}>
+          Lets Begin
+        </Button>
+      </div>
+      <div className='pt-16'>
+        <BegginerPage />
       </div>
     </div>
   );
