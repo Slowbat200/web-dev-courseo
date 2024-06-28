@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
-import BegginerPage from '../(pages)/(routes)/(beginner)/page';
+import BegginerPage from '../(pages)/(routes)/beginner/page';
 
 export default function Intro() {
   const router = useRouter();

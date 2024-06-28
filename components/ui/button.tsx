@@ -25,7 +25,8 @@ const buttonVariants = cva(
           'dark:bg-white dark:text-slate-700 active:text-black outline-sky-500 outline-4 outline hover:bg-sky-500/20 transition-none',
         landing:
           'shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear',
-      },
+        explanation:'bg-gradient-to-b from-[#06175e] to-[#0f04d4] rounded-[28px] inline-block cursor-pointer text-white font-arial text-base px-8 py-10 no-underline text-shadow-md'
+        },
       size: {
         default: 'h-10 px-4 py-2',
         sm: 'h-9 rounded-md px-3',
