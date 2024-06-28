@@ -75,18 +75,18 @@ const BegginerPage = () => {
           <p className='mt-5 pl-5 text-justify'>
             Attributes provide additional information about HTML elements. They
             are always included in the opening tag and come in name/value pairs
-            like name="value".
+            like name=&apos;value&apos;.
           </p>
         </div>
         <div className=' flex justify-center items-center'>
           <div className='mockup-code mt-10 lg:w-fit w-[80%] ml-5'>
             <pre data-prefix='$'>
-              <code>&lt;a href="https://www.example.com"&gt;</code>
+              <code>&lt;a href=&apos;https://www.example.com&apos;&gt;</code>
               <span>This is a link</span>
               <code>&lt;/a&gt;</code>
             </pre>
             <p className='px-5 leading-7 [&:not(:first-child)]:mt-6'>
-              Here, href="https://www.example.com" is an attribute of the anchor
+              Here, href=&apos;https://www.example.com&apos; is an attribute of the anchor
               (&lt;a&gt;) tag that specifies the URL the link points to.
             </p>
           </div>
