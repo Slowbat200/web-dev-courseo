@@ -1,6 +1,5 @@
 import { html } from '@/constants';
 import Structure from './components/structure';
-import { structure } from './constants';
 
 const BegginerPage = () => {
   return (
@@ -86,8 +85,9 @@ const BegginerPage = () => {
               <code>&lt;/a&gt;</code>
             </pre>
             <p className='px-5 leading-7 [&:not(:first-child)]:mt-6'>
-              Here, href=&apos;https://www.example.com&apos; is an attribute of the anchor
-              (&lt;a&gt;) tag that specifies the URL the link points to.
+              Here, href=&apos;https://www.example.com&apos; is an attribute of
+              the anchor (&lt;a&gt;) tag that specifies the URL the link points
+              to.
             </p>
           </div>
         </div>
@@ -105,6 +105,40 @@ const BegginerPage = () => {
         </div>
         <div className='flex'>
           <Structure />
+        </div>
+      </div>
+      {/* How HTML works */}
+      <div className='mt-10'>
+        <div>
+          <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight pl-5 lg:pl-0'>How HTML works:</h3>
+          <ul>
+            <li className='list-decimal'>
+              <h4 className='scroll-m-20 text-xl font-semibold tracking-tight'>HTML Document</h4>
+              <p className='px-5 leading-7 [&:not(:first-child)]:my-6'>
+                An HTML file is simply a text file with an .html extension. It
+                contains HTML code that describes the structure and content of a
+                webpage.
+              </p>
+            </li>
+            <li className='list-decimal'>
+              <h4 className='scroll-m-20 text-xl font-semibold tracking-tight'>Web Browser</h4>
+              <p className='px-5 leading-7 [&:not(:first-child)]:my-6'>
+                A web browser (like Chrome, Firefox, Safari) reads HTML files
+                and renders them as webpages. The browser interprets the HTML
+                tags and displays the content accordingly.
+              </p>
+            </li>
+            <li className='list-decimal'>
+              <h4 className='scroll-m-20 text-xl font-semibold tracking-tight'>Request and Response</h4>
+              <p className='px-5 leading-7 [&:not(:first-child)]:my-6'>
+                When you enter a URL in the browser, the browser sends a request
+                to the web server where the HTML file is hosted. The server
+                responds by sending the HTML file back to the browser. The
+                browser then reads the HTML file and displays the webpage to
+                you.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

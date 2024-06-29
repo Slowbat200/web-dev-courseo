@@ -1,4 +1,6 @@
 import { Button } from '@/components/ui/button';
+import { Modal } from '@/components/ui/modal';
+import { HtmlModal } from './modal';
 
 const Structure = () => {
   return (
@@ -34,9 +36,12 @@ const Structure = () => {
           <code className='pl-4'>&lt;/body&gt;</code>
           <code className='pl-3'>&lt;/html&gt;</code>
         </pre>
-        <div className='flex justify-end items-end mr-10'>
-          <Button variant={'explanation'}>Explanation</Button>
-        </div>
+        <HtmlModal
+          trigger={'explanation'}
+          title={'Structure explanation'}
+          description={`So what I exactly did here. 
+          This code create a simple web page with Heading <h1> and simple paragraph <p>.`}
+        />
       </div>
     </div>
   );

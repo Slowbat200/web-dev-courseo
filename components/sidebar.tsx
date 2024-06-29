@@ -42,7 +42,7 @@ export const Sidebar = ({ className }: Props) => {
           </h1>
         </Link>
         <SidebarItem label='Learn' href='/learn' iconSrc={schoolIcon} />
-        <SidebarItem label='development' href='/development' iconSrc={devIcon}/>
+        <SidebarItem label='Development' href='/development' iconSrc={devIcon}/>
         <SidebarItem label='Html' href='/html' iconSrc={htmlIcon}/>
         <SidebarItem label='Css' href='/css' iconSrc={cssIcon}/>
         <SidebarItem label='JavaScript' href='/js' iconSrc={jsIcon} />
