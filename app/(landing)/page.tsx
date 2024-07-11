@@ -1,5 +1,6 @@
 'use client';
 
+import FireLoader from '@/components/loader';
 import { Button } from '@/components/ui/button';
 import {
   ClerkLoaded,
@@ -12,8 +13,22 @@ import {
 import { motion } from 'framer-motion';
 import { Loader } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+
+  const loader = (e: any) => {
+    e.preventDefault()
+    setLoading(true);
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      setLoading(false);
+      document.body.style.overflow = '';
+      window.location.href = e.target.href;
+    }, 3000);
+  };
+
   return (
     <main className='h-fill lg:h-full w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative'>
       <div className='flex flex-col items-center justify-between p-16'>
@@ -109,13 +124,20 @@ export default function Home() {
                 </SignedOut>
                 <SignedIn>
                   {/* Button to continue learning if the user is already signed in */}
+                  {loading && (
+                    <div className='fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]'>
+                      <FireLoader loading={loading} size={50} />
+                    </div>
+                  )}
                   <Button
                     size='lg'
                     variant='landing'
                     className='w-full'
                     asChild
                   >
-                    <Link href='/learn'>Continue learning</Link>
+                    <Link href='/learn' onClick={(e) => loader(e)}>
+                      Continue learning
+                    </Link>
                   </Button>
                 </SignedIn>
               </ClerkLoaded>

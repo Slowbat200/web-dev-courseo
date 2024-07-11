@@ -104,7 +104,6 @@ const Development = () => {
     </div>
     <div className='flex justify-center items-center mt-10 pb-5'>
       <Button
-      
         variant='outline'
         onClick={onClick}
       >

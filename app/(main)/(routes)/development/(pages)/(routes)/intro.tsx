@@ -1,9 +1,24 @@
 'use client';
 
+import FireLoader from '@/components/loader';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Intro() {
+  const [loading, setLoading] = useState(false); // Add loading state
+
+  const loader = (e: any) => {
+    e.preventDefault(); // Prevent the default link behavior
+    setLoading(true);
+    document.body.style.overflow = 'hidden'; // Disable overflow
+    setTimeout(() => {
+      setLoading(false);
+      document.body.style.overflow = ''; // Re-enable overflow
+      window.location.href = e.target.href;
+    }, 5000);
+  };
+
   return (
     <section id='section' className='pt-10 h-full'>
       <div className='flex flex-col gap-10'>
@@ -40,7 +55,16 @@ export default function Intro() {
             development!
           </p>
         </div>
-        <Button variant={'link'}><Link href='/development/types'>Next lesson</Link></Button>
+        {loading && (
+          <div className='fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]'>
+            <FireLoader loading={loading} size={50} />
+          </div>
+        )}
+        <Button variant={'link'}>
+          <Link href='/development/types' onClick={(e) => loader(e)}>
+            Next lesson
+          </Link>
+        </Button>
       </div>
     </section>
   );

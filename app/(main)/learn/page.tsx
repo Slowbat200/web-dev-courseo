@@ -24,7 +24,7 @@ const LearnPage = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.8,
-            delay: 0.5,
+            delay: 3.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
           className='relative text-2xl md:text-5xl lg:text-6xl text-center font-sans font-bold pt-8'
@@ -33,7 +33,7 @@ const LearnPage = () => {
         </motion.h1>
         <aside className='px-5 py-10 text-sm md:text-md lg:text-lg xl:text-xl'>
           <p>
-            Let me introduce you. I&apos;m <Highlight>Slowbat</Highlight> and I
+            Let me introduce you. I&apos;m Slowbat and I
             will be your guide on this journey.
           </p>
           <p>
