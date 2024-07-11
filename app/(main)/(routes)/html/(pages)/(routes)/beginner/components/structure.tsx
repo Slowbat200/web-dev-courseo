@@ -82,7 +82,7 @@ const Structure = () => {
                   <code className='pl-2'>&lt;title&gt;</code>
                   <p className='leading-7 [&:not(:first-child)]:mt-3 mb-5 pl-20 text-wrap'>
                     This tag is the title of the document. It is displayed in
-                    the browser's title bar and is used by search engines to
+                    the browser&apos;s title bar and is used by search engines to
                     understand the content of the page.
                   </p>
                 </pre>
