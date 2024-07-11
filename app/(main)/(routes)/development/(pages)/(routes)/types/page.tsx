@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
@@ -10,6 +12,8 @@ import {
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
+import FireLoader from '@/components/loader';
+import { useState } from 'react';
 
 type CardProps = {
   title: string;
@@ -127,9 +131,28 @@ export default function DevTypes() {
   );
 }
 
-export function IntroCard({ title, description, link }: CardProps) {
+ function IntroCard({ title, description, link }: CardProps) {
+  const [loading, setLoading] = useState(false)
+
+  const loader = (e:any) =>{
+    e.preventDefault();
+    setLoading(true);
+    document.body.style.overflow = 'hidden';
+    setTimeout(() =>{
+      setLoading(false);
+      document.body.style.overflow = '';
+      window.location.href = e.target.href;
+    }, 3000)
+  }
   return (
     <Card>
+       {loading && (
+            <div
+            className="fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]"
+           >
+            <FireLoader loading={loading} size={50}/>
+           </div>
+          )}
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
@@ -139,7 +162,7 @@ export function IntroCard({ title, description, link }: CardProps) {
       </CardContent>
       <CardFooter>
         <Button variant='outline'>
-          <Link href={link}>Read more</Link>
+          <Link href={link} onClick={(e) => loader(e)}>Read more</Link>
         </Button>
       </CardFooter>
     </Card>
