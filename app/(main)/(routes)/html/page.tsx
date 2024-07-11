@@ -1,3 +1,5 @@
+'use client'
+
 import { DataTable } from '@/components/data-table';
 import { Tags, columns } from './columns';
 import Intro from './_components/intro';

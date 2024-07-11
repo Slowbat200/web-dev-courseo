@@ -103,7 +103,7 @@ const BegginerPage = () => {
             &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, and &lt;body&gt;.
           </p>
         </div>
-        <div className='flex'>
+        <div className='flex justify-center items-center'>
           <Structure />
         </div>
       </div>

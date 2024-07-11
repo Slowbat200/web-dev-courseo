@@ -10,14 +10,17 @@ import {
 } from '@/components/ui/dialog';
 
 import { Button } from '@/components/ui/button';
+import { cn } from '@/utils/cn';
 
 interface HtmlModalProps {
   title: string;
   description: string;
   trigger: string;
+  children: React.ReactNode;
+  className?: string;
 }
 
-export const HtmlModal = ({ title, description, trigger }: HtmlModalProps) => {
+export const HtmlModal = ({ title, description, trigger, children, className }: HtmlModalProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -27,11 +30,12 @@ export const HtmlModal = ({ title, description, trigger }: HtmlModalProps) => {
           </Button>
         </div>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className={cn(className)}>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
-        <DialogDescription>{description}</DialogDescription>
+        <DialogDescription className='max-w-fit'>{description}</DialogDescription>
+        {children}
       </DialogContent>
     </Dialog>
   );

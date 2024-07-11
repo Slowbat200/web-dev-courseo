@@ -1,14 +1,9 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import DevTypes from './dev-types';
-
+import Link from 'next/link';
 
 export default function Intro() {
-  const onClick = () => {
-    const section = document.getElementById('devTypes');
-    section?.scrollIntoView({ behavior: 'smooth' });
-  };
   return (
     <section id='section' className='pt-10 h-full'>
       <div className='flex flex-col gap-10'>
@@ -45,10 +40,7 @@ export default function Intro() {
             development!
           </p>
         </div>
-        <Button variant={'link'} onClick={onClick}>Next Lesson</Button>
-      </div>
-      <div className='pt-5'>
-        <DevTypes />
+        <Button variant={'link'}><Link href='/development/types'>Next lesson</Link></Button>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 
 import { useUser } from '@clerk/nextjs';
 import { Button } from '@/components/ui/button';
-import Intro from './_components/intro';
+import Intro from './(pages)/(routes)/intro';
 
 const Development = () => {
   const { user, isLoaded, isSignedIn } = useUser();
