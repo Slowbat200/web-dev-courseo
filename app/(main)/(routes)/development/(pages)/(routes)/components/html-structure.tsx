@@ -78,7 +78,6 @@ const HtmlStructure = () => {
                     </p>
                   ))}
                 trigger={'explanation'}
-                children={undefined}
               />
             </pre>
           </span>

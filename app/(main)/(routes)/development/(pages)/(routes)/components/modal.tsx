@@ -16,11 +16,10 @@ interface DevModalProps {
   title: string;
   description: React.ReactNode[];
   trigger: string;
-  children: React.ReactNode;
   className?: string;
 }
 
-export const DevModal = ({ title, description, trigger, children, className }: DevModalProps) => {
+export const DevModal = ({ title, description, trigger, className }: DevModalProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -35,7 +34,6 @@ export const DevModal = ({ title, description, trigger, children, className }: D
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
         <DialogDescription className='max-w-fit'>{description}</DialogDescription>
-        {children}
       </DialogContent>
     </Dialog>
   );
