@@ -71,7 +71,7 @@ export const Sidebar = ({ className }: Props) => {
       <div className='flex items-center space-x-4'>
       </div>
       <div className='lg:flex lg:flex-row hidden relative bottom-0 right-0 flex-1 gap-x-3 pb-5'>
-        <button onClick={() => setShowBattlePass(true)} className='p-2 bg-green-500 rounded'>Battle Pass</button>
+        <button onClick={() => setShowBattlePass(true)} className='p-2 bg-green-500 rounded' disabled>Battle Pass</button>
         <ThemeToggle />
         <UserButton afterSignOutUrl='/' />
       </div>
