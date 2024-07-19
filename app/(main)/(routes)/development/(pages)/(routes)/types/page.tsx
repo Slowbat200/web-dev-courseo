@@ -28,7 +28,7 @@ export default function DevTypes() {
         <h2 className='text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-center py-5'>
           Lesson 2: Types of Web development
         </h2>
-        <h3 className='text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-center lg:text-left'>
+        <h3 className='text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-center lg:text-left px-8 lg:px-0'>
           What is Front-end, Back-end and Full-stack development?
         </h3>
         <article>

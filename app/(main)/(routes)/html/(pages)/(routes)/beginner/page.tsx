@@ -98,7 +98,7 @@ const BegginerPage = () => {
           <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight pl-5 lg:pl-0'>
             Document Structure:
           </h3>
-          <p className='px-5 leading-7 [&:not(:first-child)]:mt-6'>
+          <p className='px-8 leading-7 [&:not(:first-child)]:mt-6'>
             An HTML document has a defined structure that includes elements like
             &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, and &lt;body&gt;.
           </p>
@@ -113,7 +113,7 @@ const BegginerPage = () => {
           <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight pl-5 lg:pl-0'>How HTML works:</h3>
           <ul>
             <li className='list-decimal'>
-              <h4 className='scroll-m-20 text-xl font-semibold tracking-tight'>HTML Document</h4>
+              <h4 className='scroll-m-20 text-xl font-semibold tracking-tight text-center mt-5'>HTML Document</h4>
               <p className='px-5 leading-7 [&:not(:first-child)]:my-6'>
                 An HTML file is simply a text file with an .html extension. It
                 contains HTML code that describes the structure and content of a
@@ -121,16 +121,16 @@ const BegginerPage = () => {
               </p>
             </li>
             <li className='list-decimal'>
-              <h4 className='scroll-m-20 text-xl font-semibold tracking-tight'>Web Browser</h4>
-              <p className='px-5 leading-7 [&:not(:first-child)]:my-6'>
+              <h4 className='scroll-m-20 text-xl font-semibold text-center tracking-tight'>Web Browser</h4>
+              <p className='px-5 leading-7 [&:not(:first-child)]:mt-5'>
                 A web browser (like Chrome, Firefox, Safari) reads HTML files
                 and renders them as webpages. The browser interprets the HTML
                 tags and displays the content accordingly.
               </p>
             </li>
             <li className='list-decimal'>
-              <h4 className='scroll-m-20 text-xl font-semibold tracking-tight'>Request and Response</h4>
-              <p className='px-5 leading-7 [&:not(:first-child)]:my-6'>
+              <h4 className='scroll-m-20 text-xl font-semibold tracking-tight text-center'>Request and Response</h4>
+              <p className='px-5 leading-7 [&:not(:first-child)]:mt-5'>
                 When you enter a URL in the browser, the browser sends a request
                 to the web server where the HTML file is hosted. The server
                 responds by sending the HTML file back to the browser. The

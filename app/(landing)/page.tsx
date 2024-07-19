@@ -26,7 +26,7 @@ export default function Home() {
       setLoading(false);
       document.body.style.overflow = '';
       window.location.href = e.target.href;
-    }, 3000);
+    }, 5000);
   };
 
   return (

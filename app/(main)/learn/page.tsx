@@ -27,7 +27,7 @@ const LearnPage = () => {
             delay: 3.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className='relative text-2xl md:text-5xl lg:text-6xl text-center font-sans font-bold pt-8'
+          className='text-2xl md:text-5xl lg:text-6xl text-center font-sans font-bold pt-8'
         >
           Welcome {user.username || user.fullName}
         </motion.h1>

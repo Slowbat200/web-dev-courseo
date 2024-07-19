@@ -4,6 +4,7 @@ import FireLoader from '@/components/loader';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useState } from 'react';
+import HtmlStructure from './components/html-structure';
 
 export default function Intro() {
   const [loading, setLoading] = useState(false); // Add loading state
@@ -24,7 +25,7 @@ export default function Intro() {
       <div className='flex flex-col gap-10'>
         <div className='flex flex-col gap-2'>
           <h1 className='text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center'>
-            Introduction to Web Development
+            Chapter 1: Introduction to Web Development
           </h1>
           <h2 className='text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-center'>
             Lesson 1: Overview of Web Development
@@ -54,6 +55,47 @@ export default function Intro() {
             out, join us as we dive into the exciting journey of web
             development!
           </p>
+        </div>
+        <div className='flex flex-col gap-2'>
+          <h3 className='text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-center lg:text-left'>
+            Understanding Web Development
+          </h3>
+          <p className='text-lg lg:pr-5 px-5 lg:px-0 text-justify'>
+            Before we start coding, let&apos;s discuss what web development involves.
+            Web development is the process of creating and maintaining websites.
+            It can bedevided into two main categories:
+          </p>
+          <div className='px-10'>
+            <ul className='list-decimal'>
+              <li>
+                <p className='text-lg lg:pr-5 px-5 lg:px-0 text-justify'>
+                  <span className='font-semibold'>Front-end development:</span>{' '}
+                  This focuses on what users see on their screens. It includes
+                  designing and implementing the layout, look, and feel of a
+                  website.
+                </p>
+              </li>
+              <li>
+                <p className='text-lg lg:pr-5 px-5 lg:px-0 text-justify'>
+                  <span className='font-semibold'>Back-end development:</span>
+                  {''}
+                  This involves server-side operations, databases, and
+                  application logic, but we&apos;ll focus mainly on frontend
+                  development in this lesson.
+                </p>
+              </li>
+              <li>
+                <p className='text-lg lg:pr-5 px-5 lg:px-0 text-justify'>
+                  <span className='font-semibold'>Full-stack development:</span>
+                  {''}
+                  This involves both front-end and back-end development, and
+                  developers who work in this area are known as full-stack
+                  developers.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <HtmlStructure />
         </div>
         {loading && (
           <div className='fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]'>
