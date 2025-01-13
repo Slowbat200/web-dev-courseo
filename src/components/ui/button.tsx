@@ -20,9 +20,8 @@ const buttonVariants = cva(
         link: 'dark:text-primary text-secondary underline-offset-4 hover:underline',
         signUp: `relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium 
           shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]`,
-        landing: `dark:bg-[#00FFFF] dark:text-secondary dark:hover:bg-[#FF00FF]/80 font-bold uppercase 
-          dark:shadow-[0_4px_14px_0_rgb(0,118,255,75%)] dark:hover:shadow-[0px_14px_18px_rgba(255,0,255,30%)] dark:hover:text-white 
-          bg-[#ffd700] text-[#333333] hover:bg-[#ff4500] hover:border-2 hover:border-[#39ff14] transition shadow-neon-normal hover:shadow-neon-hover active:shadow-neon-inset`,
+        landing: `dark:bg-[#4aa8ff] dark:text-secondary dark:hover:bg-[#3585d9]/80 font-bold uppercase 
+          bg-[#007aff] text-[#fff] hover:bg-[#005bb5] hover:border-2 transition shadow-neon-normal hover:shadow-neon-hover active:shadow-neon-inset`,
         modal:
           'dark:text-black dark:bg-[#98E4FF] bg-[#FF6EC7] text-[#333333] hover:outline-[#FF8C00] dark:text-black hover:outline dark:hover:outline-[#9400FF] shadow-[0_4px_14px_0_#27005D]',
         price_button:

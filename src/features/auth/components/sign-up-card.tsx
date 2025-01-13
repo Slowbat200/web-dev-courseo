@@ -15,13 +15,14 @@ import { Input } from '@/components/ui/aceternity-input';
 
 import { SignFlow } from '../types';
 import { useAuthActions } from '@convex-dev/auth/react';
+import { Label } from '@/components/ui/label';
 
 interface SignUpCardProps {
   setState: (state: SignFlow) => void;
 }
 
 export const SignUpCard = ({ setState }: SignUpCardProps) => {
-  const {signIn} = useAuthActions()
+  const { signIn } = useAuthActions();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -56,109 +57,137 @@ export const SignUpCard = ({ setState }: SignUpCardProps) => {
   };
 
   return (
-    <div className='max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black space-y-2.5'>
-      <h2 className='font-bold text-neutral-800 dark:text-neutral-200 text-2xl leading-none tracking-tight'>
-        Sign Up to continue
-      </h2>
-      <p className='text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300'>
-        Use your email or another service to continue
-      </p>
-      {!!error && (
-        <div className='bg-destructive/15 p-3 rounded-md flex items-center gap-x-2 text-sm text-destructive mb-6'>
-          <TriangleAlert className='size-4' />
-          <p>{error}</p>
-        </div>
-      )}
-      <form className='my-8' onSubmit={onPasswordSignUp}>
-        <div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4'>
-          <LabelInputContainer>
-            <Input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              id='fullname'
-              placeholder='John Doe'
-              type='text'
-              disabled={pending}
-              required
-            />
-          </LabelInputContainer>
-        </div>
-        <LabelInputContainer className='mb-4'>
-          <Input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            id='email'
-            placeholder='johndoe@gmail.com'
-            type='email'
-            disabled={pending}
-            required
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className='mb-4'>
-          <Input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            id='password'
-            placeholder='••••••••'
-            type='password'
-            disabled={pending}
-            required
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className='mb-4'>
-          <Input
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            id='password'
-            placeholder='••••••••'
-            type='password'
-            disabled={pending}
-            required
-          />
-        </LabelInputContainer>
-        <Button type='submit' className='w-full' size='lg' disabled={pending}>
-          Continue
-        </Button>
-      </form>
-      <Separator />
-      <div className='flex flex-col gap-y-2.5'>
-        <Button
-          type='submit'
-          variant='signUp'
-          size='lg'
-          disabled={pending}
-          onClick={() => handleProviderSignUp('google')}
-        >
-          <FcGoogle className='h-4 w-4 text-neutral-800 dark:text-neutral-300' />
-          <span className='text-neutral-700 dark:text-neutral-300 text-sm'>
-          Continue with Google
-          </span>
-          <BottomGradient />
-        </Button>
-
-        <Button
-          type='submit'
-          variant='signUp'
-          size='lg'
-          disabled={pending}
-          onClick={() => handleProviderSignUp('github')}
-        >
-          <FaGithub className='h-4 w-4 text-neutral-800 dark:text-neutral-300' />
-          <span className='text-neutral-700 dark:text-neutral-300 text-sm'>
-            Continue with Github{' '}
-          </span>
-          <BottomGradient />
-        </Button>
+    <div className='flex h-screen w-screen '>
+      {/* Left side */}
+      <div className='w-1/2 bg-gray-100 dark:bg-gray-800 flex flex-col justify-center items-center p-8'>
+        <h1 className='text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4'>
+          Welcome User
+        </h1>
+        <p className='text-lg text-gray-600 dark:text-gray-400'>
+          Sign up to your account to start learning.
+        </p>
       </div>
-      <p className='text-xs text-muted-foreground'>
-        Already have an account?{' '}
-        <span
-          onClick={() => setState('signIn')}
-          className='text-sky-700 hover:underline cursor-pointer'
-        >
-          Sign In
-        </span>
-      </p>
+      {/* Right side */}
+      <div className='w-1/2 bg-white dark:bg-gray-900 flex flex-col justify-center items-center p-8'>
+        <div className='w-full max-w-md'>
+          <h2 className='text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4'>
+            Sign Up
+          </h2>
+          <p className='text-sm text-gray-600 dark:text-gray-400 mb-6'>
+            Use your email or other service to continue.
+          </p>
+          {!!error && (
+            <div className='bg-red-100 p-3 rounded-md flex items-center gap-x-2 text-sm text-red-600 mb-6'>
+              <TriangleAlert className='w-5 h-5' />
+              <p>{error}</p>
+            </div>
+          )}
+          <form onSubmit={onPasswordSignUp} className='space-y-4'>
+            <div>
+              <Input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                id='fullname'
+                placeholder='John Doe'
+                type='text'
+                disabled={pending}
+                required
+              />
+            </div>
+            <div>
+              <Label
+                htmlFor='email'
+                className='block text-sm font-medium text-gray-700 dark:text-gray-300 pb-3'
+              >
+                Email
+              </Label>
+              <Input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                id='email'
+                placeholder='johndoe@gmail.com'
+                type='email'
+                disabled={pending}
+                required
+              />
+              <div>
+                <Label
+                  htmlFor='password'
+                  className='block text-sm font-medium text-gray-700 dark:text-gray-300 pt-5 pb-3'
+                >
+                  Password
+                </Label>
+                <Input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  id='password'
+                  placeholder='••••••••'
+                  type='password'
+                  disabled={pending}
+                  required
+                />
+              </div>
+              <div>
+                <Label
+                  htmlFor='password'
+                  className='block text-sm font-medium text-gray-700 dark:text-gray-300 pt-5 pb-3'
+                >
+                  Confirm Password
+                </Label>
+                <Input
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  id='password'
+                  placeholder='••••••••'
+                  type='password'
+                  disabled={pending}
+                  required
+                />
+              </div>
+              <Button
+                type='submit'
+                className='w-full mt-10'
+                size='lg'
+                disabled={pending}
+              >
+                Continue
+              </Button>
+            </div>
+          </form>
+          <Separator className='my-6' />
+          <div className='flex flex-row gap-x-4'>
+            <Button
+              disabled={pending}
+              onClick={() => handleProviderSignUp('google')}
+              variant='outline'
+              size='lg'
+              className='w-fit relative'
+            >
+              <FcGoogle className='w-7 h-7' />
+            </Button>
+            <Button
+              disabled={pending}
+              onClick={() => handleProviderSignUp('github')}
+              variant='outline'
+              size='lg'
+              className='w-fit relative'
+            >
+              <FaGithub className='w-7 h-7 rounded-full' />
+            </Button>
+            <BottomGradient />
+          </div>
+          <p className='text-xs text-gray-600 dark:text-gray-300 mt-4'>
+            Already have an account?{' '}
+            <span
+              onClick={() => setState('signIn')}
+              className='text-sky-700 dark:text-sky-300 hover:underline cursor-pointer'
+            >
+              Sign in here
+            </span>
+            .
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
@@ -169,19 +198,5 @@ const BottomGradient = () => {
       <span className='group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent' />
       <span className='group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent' />
     </>
-  );
-};
-
-const LabelInputContainer = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <div className={cn('flex flex-col space-y-2 w-full', className)}>
-      {children}
-    </div>
   );
 };

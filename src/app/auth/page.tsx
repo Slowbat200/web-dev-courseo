@@ -15,7 +15,7 @@ const AuthPage = () => {
     setShowAuthScreen(false); // Close the AuthScreen
   };
   return (
-    <main className='h-full lg:h-screen w-full dark:bg-[#08081a] bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative'>
+    <main className='h-screen lg:h-screen w-full dark:bg-[#08081a] bg-[#f5f5f5f5] dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative'>
       <div className='flex flex-col items-center justify-between p-16'>
         {/* Radial gradient for the container to give a faded look */}
         <h1 className='relative text-2xl md:text-5xl lg:text-6xl dark:text-[#F0F3FF] text-neutral-800 text-center font-sans font-bold'>

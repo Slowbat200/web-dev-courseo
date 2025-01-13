@@ -138,7 +138,7 @@ export default function Home() {
               web, development environment for developers and much more.
             </p>
             <Button
-              onClick={() => router.push(`/courses/web-dev/${webDevId}`)}
+              onClick={() => router.push(`/courses/web-dev`)}
               variant='price_button'
             >
               <span>Enroll now </span>
